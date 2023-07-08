@@ -11,9 +11,9 @@ header {
     border-bottom: 1px solid #000;
 }
 
-img {
+/* img {
     filter: grayscale(100%);
-}
+} */
 
 h1 {
     font-family: 'Montserrat Subrayada', sans-serif;
@@ -23,7 +23,7 @@ h1 {
 }
 
 h2 {
-   font-family: 'Montserrat Subrayada', sans-serif; 
+    font-family: 'Montserrat Subrayada', sans-serif; 
 }
 
 h3 {
