@@ -1,11 +1,22 @@
 <!-- users/templates/registration/login.html -->
-{% extends 'base.html' %}
+{% extends "base.html" %}
+{% load static %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{% static 'user-styles.css'%}">
+{% endblock %}
 
 {% block content %}
-<h2>Login</h2>
-<form method="post">
-    {% csrf_token %}    
-    {{ form.as_p }}
-    <button type="submit">Login</button>
-</form>
+<div class="login-form">
+    <h2>Login</h2>
+    <div id="login-form">
+        <form method="post">
+            {% csrf_token %}    
+            {{ form.as_p }}
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <br>
+    <a href="{% url 'password_reset' %}"><i>Forgot Password?</i></a>
+</div>
 {% endblock %}

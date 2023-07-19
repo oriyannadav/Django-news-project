@@ -1,12 +1,19 @@
 <!-- users/templates/users/createAccount.html -->
+{% extends "base.html" %}
+{% load static %}
 
-{% extends 'base.html' %}
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css'%}">
+{% endblock %}
 
 {% block content %}
+<div class="create-account-form">
     <h2>Create Account</h2>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Create Account</button>
-    </form>
+    <div id="create-account-form">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Create Account</button>
+        </form>
+    </div>
 {% endblock %}
