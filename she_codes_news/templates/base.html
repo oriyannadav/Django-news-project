@@ -15,14 +15,19 @@
 
     <body>
         <header>
+            {% load static %}
+            <img src="../../static/news/images/She-Codes-113.png">
             <div id="header-text">
                 <a id="header-link" href="{% url 'news:index' %}">
                     <h1>She {Codes} News</h1>
                 </a>
+                {% include './nav.html' %}
             </div>
-            {% include './nav.html' %}
         </header>
 
         {% block content %}{% endblock %}
+        <footer>
+            <small><a href="{% url 'news:index' %}">© 2023 She Codes News</a></small>
+        </footer>
     </body>
 </html>
