@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Oleo+Script&display=swap');
+
+.login-form {
+    padding: 125px 500px 0px 500px;
+}
+
+#login-form {
+    display: flex;
+    justify-content: center;
+}
+
+.login-form a {
+    display: flex;
+    justify-content: center;
+}
+
+.create-account-form {
+    padding: 150px 500px;
+}
+
+#create-account-form {
+    display: flex;
+    justify-content: center;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+}
