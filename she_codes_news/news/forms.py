@@ -2,6 +2,8 @@
 from django import forms
 from django.forms import ModelForm
 from .models import NewsStory
+from .models import NewsComment
+
 
 class StoryForm(ModelForm):
     class Meta:        
@@ -17,3 +19,8 @@ class StoryForm(ModelForm):
                 }
             ),
         }
+
+class NewCommentForm(forms.ModelForm):
+    class Meta:
+        model = NewsComment
+        fields = ['content']
