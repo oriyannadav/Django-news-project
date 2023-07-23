@@ -21,18 +21,16 @@ Once the dependencies are installed, migrate the database to set up the necessar
 
 ## Project Features
 - [x] Order stories by date
-    ![Home_page-stories_ordered_by_date_1](she_codes_news/screenshots/home-page-screenshot1.png)
+    [Home_page-stories_ordered_by_date_1](she_codes_news/screenshots/home-page-screenshot1.png)
      [Home_page-stories_ordered_by_date_2](screenshots/home-page-screenshot2.png)
 - [x] Styled "new story" form
-    ![Write-new-story](screenshots/write-new-story.png)
+    [Write-new-story](screenshots/write-new-story.png)
 - [x] Story images
     ![Stories-images_1](screenshots/home-page-screenshot3.png)
      [Stories-images_2](screenshots/home-page-screenshot4.png)
-- [x] Log-in/log-out
-    ![Login](screenshots/login.png)
-     [Logout](screenshots/logout.png)
+- [x] Log-in/log-out[Login](screenshots/login.png)[Logout](screenshots/logout.png)
 - [x] "Account view" page
-    ![Profile](screenshots/profile.png)
+    [Profile](screenshots/profile.png)
 - [x] "Create Account" page
     ![Create-account_1](screenshots/create-account1.png)
      [Create-account_2](screenshots/create-account1.png)
