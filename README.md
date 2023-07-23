@@ -22,29 +22,29 @@ Once the dependencies are installed, migrate the database to set up the necessar
 ## Project Features
 - [x] Order stories by date
 - [Home_page-stories_ordered_by_date_1](she_codes_news/screenshots/home-page-screenshot1.png)
-- [Home_page-stories_ordered_by_date_2](screenshots/home-page-screenshot2.png)
+- [Home_page-stories_ordered_by_date_2](she_codes_news/screenshots/home-page-screenshot2.png)
 - [x] Styled "new story" form
-- [Write-new-story](screenshots/write-new-story.png)
+- [Write-new-story](she_codes_news/screenshots/write-new-story.png)
 - [x] Story images
-- [Stories-images_1](screenshots/home-page-screenshot3.png)
-- [Stories-images_2](screenshots/home-page-screenshot4.png)
+- [Stories-images_1](she_codes_news/screenshots/home-page-screenshot3.png)
+- [Stories-images_2](she_codes_news/screenshots/home-page-screenshot4.png)
 - [x] Log-in/log-out
-- [Login](screenshots/login.png)
-- [Logout](screenshots/logout.png)
+- [Login](she_codes_news/screenshots/login.png)
+- [Logout](she_codes_news/screenshots/logout.png)
 - [x] "Account view" page
-- [Profile](screenshots/profile.png)
+- [Profile](she_codes_news/screenshots/profile.png)
 - [x] "Create Account" page
-- [Create-account_1](screenshots/create-account1.png)
-- [Create-account_2](screenshots/create-account1.png)
+- [Create-account_1](she_codes_news/screenshots/create-account1.png)
+- [Create-account_2](she_codes_news/screenshots/create-account1.png)
 - [x] "Log-in" button only visible when no user is logged in/"Log-out" buttononly visible when a user *is* logged in
-- [Login](screenshots/login.png)
-- [Logout](screenshots/logout.png)
+- [Login](she_codes_news/screenshots/login.png)
+- [Logout](she_codes_news/screenshots/logout.png)
 - [x] "Create Story" functionality only available when user is  logged in
-- [Login](screenshots/login.png)
-- [Logout](screenshots/logout.png)
+- [Login](she_codes_news/screenshots/login.png)
+- [Logout](she_codes_news/screenshots/logout.png)
 
 ## Additional Features:
 - [x] Our form for creating stories requires you to add the publication date, update this to automatically save the publication date as the day the story was first published.
-- [Latest-news](screenshots/latest-news.png)
+- [Latest-news](she_codes_news/screenshots/latest-news.png)
 - [x] User can update they're profile.
-- [Update-profile](screenshots/update-profile.png)
+- [Update-profile](she_codes_news/screenshots/update-profile.png)
