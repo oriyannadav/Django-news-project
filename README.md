@@ -17,7 +17,7 @@ To download and run the codebase, first, clone the repository to your local mach
 Once the dependencies are installed, migrate the database to set up the necessary tables using python manage.py migrate. To access the admin panel, create a superuser with python manage.py createsuperuser. Now, you're ready to run the development server by executing python manage.py runserver.
 
 ## Database Schema
-- [ERD](screenshots/ERD.png)
+- [ERD](she_codes_news/screenshots/ERD.png)
 
 ## Project Features
 - [x] Order stories by date
