@@ -33,19 +33,19 @@ class ChangeAccountView(CreateView):
     success_url = reverse_lazy('profile')
     template_name = 'users/changeAccount.html'
 
-    # def form_valid(self, form):
-    #     # Save the user object from the form
-    #     user = form.save()
+    def form_valid(self, form):
+        # Save the user object from the form
+        user = form.save()
 
-    #     # Get the bio and profile_picture from the form's cleaned data
-    #     bio = form.cleaned_data.get('bio')
-    #     profile_picture = form.cleaned_data.get('profile_picture')
+        # Get the bio and profile_picture from the form's cleaned data
+        bio = form.cleaned_data.get('bio')
+        profile_picture = form.cleaned_data.get('profile_picture')
 
-    #     # Create the user profile with the bio and profile_picture
-    #     UserProfile.objects.create(user=user, bio=bio, profile_picture=profile_picture)
+        # Create the user profile with the bio and profile_picture
+        UserProfile.objects.create(user=user, bio=bio, profile_picture=profile_picture)
 
-    #     # Return the super class's form_valid method
-    #     return super().form_valid(form)
+        # Return the super class's form_valid method
+        return super().form_valid(form)
 
 
 class ResetPasswordView(SuccessMessageMixin, PasswordResetView):
