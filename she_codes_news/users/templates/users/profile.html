@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{% static 'user-styles.css'%}">
+{% endblock %}
+
+{% block content %}
+    <!-- <h2>{{ user_profile.user.username }}'s Profile</h2> -->
+    <h2>{{ user_profile.user.first_name }}'s Profile</h2>
+    {% if user_profile.profile_picture %}
+        <img src="{{ user_profile.profile_picture.url }}" alt="Profile Picture">
+    {% endif %}
+    <p>First Name: {{ user_profile.user.first_name }}</p>
+    <p>Last Name: {{ user_profile.user.last_name }}</p>
+    <p>Email: {{ user_profile.user.email }}</p>
+    <p>{{ user_profile.bio }}</p>
+    <br>
+    <a href="{% url 'users:changeAccount' %}"><i><u>Update Profile</u></i></a>
+{% endblock %}
