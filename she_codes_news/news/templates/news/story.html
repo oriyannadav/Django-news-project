@@ -7,55 +7,52 @@
 {% endblock %}
 
 {% block content %}
-<div id="story-wrapper">
-    <h2>{{ story.title }}</h2>
-    <h4>{{ story.author }}</h4>
-    <div id="story-content">
-        <img src="{{ story.image }}">
-        {{ story.content|linebreaks }}
-    </div>
-</div>
-
-<!-- COMMENTS  -->
-
-<h2>Leave your comment!</h2>
-<div id="comments_section">
-
-{% if user.is_authenticated %}
-    <form method="POST">
-        {% csrf_token %}
-        <div class="form-group">
-            {{ comment_form }}
-            <button type="submit">Add comment</button>
+    <div id="story-wrapper">
+        <h2>{{ story.title }}</h2>
+        <h4>{{ story.author }}</h4>
+        <div id="story-content">
+            <img src="{{ story.image }}">
+            {{ story.content|linebreaks }}
         </div>
-    </form>
-{% else %}
-    <a href="{% url 'login' %}?next={{request.path}}">Log in to add a comment!</a>
-    <br>
-{% endif %}
+    </div>
 
-{% if comments %}
-    <strong >{{ object.number_of_comments }} Comment{{ object.number_of_comments|pluralize }}</strong>
-    <hr>
-    <ul>
-    {% for comment in comments %}
-        <li>           
-            <div>
-                <span>
-                    <strong>{{ comment.author }} </strong>
-                    <small>{{ comment.date_posted }}</small>
-                </span>
-                <p>
-                    {{ comment.content|safe }}
-                </p>
-            </div>
-        </li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <strong>No comments yet...</strong>
-{% endif %}
+    <div id="comments_section">
+        <h2 id="comments-heading">Leave your comment!</h2>
+        {% if user.is_authenticated %}
+            <form method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    {{ comment_form }}
+                    <br>
+                    <button id="comments-button" type="submit">Add comment</button>
+                </div>
+            </form>
+        {% else %}
+            <a href="{% url 'login' %}?next={{request.path}}">Log in to add a comment!</a>
+            <br>
+        {% endif %}
 
-</div>
+        {% if comments %}
+            <strong id="comments-number">{{ object.number_of_comments }} Comment{{ object.number_of_comments|pluralize }}</strong>
+            <hr>
+            <ul>
+            {% for comment in comments %}
+                <li>           
+                    <div>
+                        <span>
+                            <strong>{{ comment.author }} </strong>
+                            <small>{{ comment.date_posted }}</small>
+                        </span>
+                        <p>
+                            {{ comment.content|safe }}
+                        </p>
+                    </div>
+                </li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <strong id="no-comments">No comments yet...</strong>
+        {% endif %}
+    </div>
 
 {% endblock %}
