@@ -6,13 +6,12 @@
 {% endblock %}
 
 {% block content %}
-    <!-- search_results.html -->
-    <h3>Search Results</h3>
-    <p>Showing search results for "{{ search_query }}"</p>
-
-    {% for news_story in news_stories %}
-        <!-- Display the search results here -->
-    {% empty %}
-        <p>No search results found.</p>
-    {% endfor %}
+    <div id="search-results">
+        <h3>Search Results</h3>
+        <p>Showing search results for "{{ search_query }}"</p>
+        {% for news_story in news_stories %}
+        {% empty %}
+            <p>No search results found.</p>
+        {% endfor %}
+    </div>
 {% endblock %}

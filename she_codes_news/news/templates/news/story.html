@@ -26,23 +26,24 @@
         {% csrf_token %}
         <div class="form-group">
             {{ comment_form }}
-            <button class="btn btn-info" type="submit">Add comment <i class="fas fa-comments"></i></button>
+            <button type="submit">Add comment</button>
         </div>
     </form>
 {% else %}
-    <a class="btn btn-outline-info" href="{% url 'login' %}?next={{request.path}}">Log in to add a comment!</a><br>
+    <a href="{% url 'login' %}?next={{request.path}}">Log in to add a comment!</a>
+    <br>
 {% endif %}
 
 {% if comments %}
-    <strong class="text-secondary">{{ object.number_of_comments }} Comment{{ object.number_of_comments|pluralize }}</strong>
+    <strong >{{ object.number_of_comments }} Comment{{ object.number_of_comments|pluralize }}</strong>
     <hr>
     <ul>
     {% for comment in comments %}
         <li>           
             <div>
                 <span>
-                    <strong class="text-info">{{ comment.author }} </strong>
-                    <small class="text-muted">{{ comment.date_posted }}</small>
+                    <strong>{{ comment.author }} </strong>
+                    <small>{{ comment.date_posted }}</small>
                 </span>
                 <p>
                     {{ comment.content|safe }}
@@ -52,7 +53,7 @@
     {% endfor %}
     </ul>
 {% else %}
-    <strong class="text-secondary">No comments yet...</strong>
+    <strong>No comments yet...</strong>
 {% endif %}
 
 </div>
