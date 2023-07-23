@@ -3,6 +3,12 @@ from django.contrib.auth import get_user_model
 from django.utils import timezone
 from django.contrib.auth.models import User
 
+class Tag(models.Model):
+    name = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.name
+
 class NewsStory(models.Model):
     title = models.CharField(max_length=200)
     author = models.ForeignKey(
@@ -12,6 +18,7 @@ class NewsStory(models.Model):
     pub_date = models.DateTimeField()
     content = models.TextField()
     image = models.URLField(max_length=200, null=True)
+    tags = models.ManyToManyField(Tag)
 
     @property
     def number_of_comments(self):

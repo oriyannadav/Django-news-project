@@ -28,5 +28,4 @@ class CustomUserChangeForm(UserChangeForm):
         self.fields.pop('username', None)
 
     def clean_username(self):
-        # Exclude username from validation during updates
         return self.instance.username

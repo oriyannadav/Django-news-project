@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{% static 'news/styles.css'%}">
+{% endblock %}
+
+{% block content %}
+    <!-- search_results.html -->
+    <h3>Search Results</h3>
+    <p>Showing search results for "{{ search_query }}"</p>
+
+    {% for news_story in news_stories %}
+        <!-- Display the search results here -->
+    {% empty %}
+        <p>No search results found.</p>
+    {% endfor %}
+{% endblock %}
