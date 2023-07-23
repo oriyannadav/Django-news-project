@@ -122,7 +122,7 @@
 }
 
 #all-stories {
-    padding: 0px 150px;
+    padding: 0px 150px 50px 150px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -140,9 +140,66 @@
 #story-content img {
     float: right;
     margin: 0 0 10px 10px;
-    width: 50%;
+    width: 30%;
+    max-height: 500px;
 }
 
 .story-card-text {
     padding: 10px;
+}
+
+#top-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row-reverse;
+    align-content: flex-start;
+    padding: 50px 185px;
+}
+
+.searchbar-wrapper {
+    /* padding: 50px 50px 50px 50px; */
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+
+#searchbar-input {
+    width: 70%;
+    background-color: #f2f2f2;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 8px;
+    margin-right: 8px;
+    flex: 1;
+}
+
+#searchbar {
+    display: flex;
+} 
+
+button, #button {
+    background-color: #8246AF;
+    padding: 8px 24px;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border-radius: 4px;
+    transition: all 0.6s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+button:hover, #button:hover {
+    outline: 1px solid var(--black);
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+}
+
+#search-results {
+    padding: 100px 150px;
 }

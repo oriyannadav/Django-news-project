@@ -55,28 +55,6 @@ class AddStoryView(generic.CreateView):
         return super().form_valid(form)
 
 
-# def search_results(request):
-#     # Get the search query from the user
-#     search_query = request.GET.get('q')
-
-#     # If a search query is provided, filter the NewsStory objects accordingly
-#     if search_query:
-#         news_stories = NewsStory.objects.filter(
-#             models.Q(title__icontains=search_query) |  # Filter by title containing the search query
-#             models.Q(content__icontains=search_query) |  # Filter by content containing the search query
-#             models.Q(author__username__icontains=search_query) |  # Filter by author username containing the search query
-#             models.Q(tags__name__icontains=search_query)  # Filter by tags containing the search query
-#         ).distinct()
-#     else:
-#         # If no search query is provided, display all NewsStory objects
-#         news_stories = NewsStory.objects.all()
-
-#     context = {
-#         'search_query': search_query,
-#         'news_stories': news_stories
-#     }
-#     return render(request, 'news/index.html', context)
-
 def search_results(request):
     if 'q' in request.GET:
         search_query = request.GET['q']
