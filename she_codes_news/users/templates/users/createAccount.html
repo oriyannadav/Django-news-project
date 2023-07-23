@@ -10,7 +10,7 @@
 <div class="create-account-form">
     <h2>Create Account</h2>
     <div id="create-account-form">
-        <form method="post">
+        <form method="post" enctype="multipart/form-data">
             {% csrf_token %}
             {{ form.as_p }}
             <button type="submit">Create Account</button>
